@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chiru | Contact Info</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      overflow: hidden;
+    }
+
+    /* Floating background shapes */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.25;
+      animation: float 10s infinite ease-in-out;
+    }
+    .circle:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      background: #ffffff;
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+    .circle:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      background: #fff;
+      bottom: 15%;
+      right: 10%;
+      animation-delay: 3s;
+    }
+    .circle:nth-child(3) {
+      width: 150px;
+      height: 150px;
+      background: #fff;
+      bottom: 30%;
+      left: 40%;
+      animation-delay: 6s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 50px 80px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 42px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+      font-size: 20px;
+      color: #f2f2f2;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 10px;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .contact-item img {
+      width: 26px;
+      height: 26px;
+      margin-right: 12px;
+      filter: invert(1);
+    }
+
+    a {
+      color: #ffdfba;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Floating Glow Circles -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <!-- Main Content -->
+  <div class="card">
+    <h1>Chiru</h1>
+
+    <div class="contact-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email icon">
+      <a href="mailto:chiru@anglernook.com">chiru@anglernook.com</a>
+    </div>
+
+    <div class="contact-item">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone icon">
+      <span>+1 (815) 513-8757</span>
+    </div>
+  </div>
+
+</body>
+</html>
